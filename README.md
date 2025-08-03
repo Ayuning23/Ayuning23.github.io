@@ -1,5 +1,4 @@
 
-
 ## Sistem Informasi Mahasiswa Magang
 
 Sistem Informasi Mahasiswa Magang (MagangApp) adalah aplikasi web berbasis Laravel yang dikembangkan untuk mempermudah pengelolaan data mahasiswa yang sedang melaksanakan kegiatan magang di instansi atau perusahaan tertentu. Aplikasi ini dibuat sebagai bagian dari Ujian Akhir Semester Praktik Pemrograman Web.
