@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://via.placeholder.com/400x120.png?text=MAGANG_APP" width="400" alt="Logo MAGANG_APP">
-</p>
-
 
 
 ## Sistem Informasi Mahasiswa Magang
