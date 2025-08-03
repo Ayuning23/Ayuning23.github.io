@@ -9,58 +9,61 @@
 
 ## Sistem Informasi Mahasiswa Magang
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Sistem Informasi Mahasiswa Magang (MagangApp) adalah aplikasi web berbasis Laravel yang dikembangkan untuk mempermudah pengelolaan data mahasiswa yang sedang melaksanakan kegiatan magang di instansi atau perusahaan tertentu. Aplikasi ini dibuat sebagai bagian dari Ujian Akhir Semester Praktik Pemrograman Web.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Fitur Unggulan
+Aplikasi ini menyediakan berbagai fitur yang mendukung manajemen data magang, di antaranya:
 
-## Learning Laravel
+🔐 Autentikasi Pengguna
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Fitur Login dan Register untuk mengamankan akses ke sistem.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Hanya pengguna terdaftar yang dapat mengelola data.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+👨‍🎓 CRUD Mahasiswa
 
-## Laravel Sponsors
+Tambah, edit, lihat, dan hapus data mahasiswa.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Setiap mahasiswa memiliki informasi nama, NIM, program studi, dan tempat magang.
 
-### Premium Partners
+🏢 CRUD Tempat Magang
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Kelola daftar instansi atau perusahaan tempat mahasiswa magang.
 
-## Contributing
+Dapat menambahkan nama, alamat, dan keterangan tempat magang.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+📄 Upload Laporan Magang (PDF)
 
-## Code of Conduct
+Mahasiswa dapat mengunggah laporan hasil magangnya dalam format PDF.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+File laporan disimpan dan dapat diunduh kembali.
 
-## Security Vulnerabilities
+📊 Export Data ke Excel
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Data mahasiswa dapat diekspor ke file Excel untuk keperluan dokumentasi atau pelaporan.
 
-## License
+📱 Antarmuka Responsif
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Tampilan disusun menggunakan Tailwind CSS tanpa dependensi npm.
+
+Responsif di berbagai ukuran layar (mobile, tablet, desktop).
+
+
+
+###  Teknologi yang Digunakan
+
+- Laravel 9 adalah framework utama yang digunakan untuk membangun struktur aplikasi secara MVC agar lebih rapi dan mudah dikelola.
+- PHP 8 menjadi bahasa pemrograman sisi server yang mendukung performa tinggi dan fitur modern, ideal untuk Laravel.
+- MySQL berfungsi sebagai database utama yang menyimpan data pengguna, mahasiswa, tempat magang, dan laporan.
+- Blade digunakan sebagai template engine Laravel untuk membangun tampilan halaman yang dinamis dan terintegrasi dengan logika backend.
+- Tailwind CSS digunakan untuk mendesain tampilan antarmuka yang responsif dan modern dengan pendekatan utility-first, tanpa instalasi npm.
+- Laravel Excel adalah library tambahan yang mempermudah ekspor data mahasiswa ke file Excel dengan cepat dan otomatis.
+
+## Struktur Fitur Utama
+-app/Models → Model: Mahasiswa.php, TempatMagang.php, User.php
+-app/Http/Controllers → Controller: MahasiswaController, TempatMagangController, AuthController
+-resources/views → Tampilan Blade: dashboard.blade.php, mahasiswa/index.blade.php, dll.
+-routes/web.php → Routing aplikasi
+-public/uploads/laporan → Direktori penyimpanan file PDF laporan mahasiswa
+
